@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title> {% block title %}Reddit{% endblock %}</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="static/css/sidebar.css">
+	<script src="static/js/script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sibebar-brand">
+        <a href="">
+          <i class="fa fa-reddit-alien"></i> Reddit Reader
+        </a>
+          </li>
+        <li>
+          <a href="">
+            <i class="fa fa-refresh"></i> Refresh
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank">
+            <i class="fa fa-github"></i> Github
+          </a>
+      </li>
+      <li>
+        <a href="">
+          <i class="fa fa-lock"></i> Login
+        </a>
+      </li>
+    </ul>          
+  </div>
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      {% with flashes = get_flashed_messages() %}
+        {% if flashes %}
+          <div class="row">
+            {% for message in flashes %}
+             <div class="alert alert-success alert-dismissible" role="alert">
+               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+               <strong><i class="fa fa-warning"></i> Notice </strong>{{ message }}
+            </div>
+            {% endfor %}
+      </div>
+      {% endif %}
+      {% endwith %}
+      <div class="row">
+                    {% block body %}{% endblock body %}
+      </div>
+    </div>
+  </div>
+  <div class="footer" style="padding:10px;margin-top:35px;">
+    
+            <i class="fa fa-envira"></i> Powered By <a href="http://flask.pocoo.org" target="_blank">Flask</a> &amp; <a href="https://www.mongodb.com" target="_blank">MongoDB</a>
+            <span class="pull-right">
+                <i class="fa fa-th-list"></i> Created by <a href="" target="_blank">xxx</a>
+            </span>
+</div>
+            
+</div>
+
+</body>
+</html>
