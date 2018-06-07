@@ -3,4 +3,8 @@ window.onload = function() {
 	login.onclick = function() {
 		window.location = '/go';
 	}
+	signup = document.getElementById('signup');
+	signup.onclick = function() {
+		window.location = '/go';
+	}
 }
