@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="erik">
+	<title>Reddit Login</title>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/login.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+
+      <form class="form-signin" id="myform">
+        <h3><i class="fa fa-reddit"></i> Reddit Reader </h3>
+        <h4 class="form-signin-heading">Please sign in</h4>
+        <label for="inputEmail" class="sr-only">username</label>
+        <input type="text" id="inputEmail" class="form-control" placeholder="Username" name="username" required autofocus>
+        <label for="inputPassword" class="sr-only">password</label>
+        <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
+        <div class="checkbox">
+          <div align="center">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" id="signin" type="submit">Sign in</button>
+      </form>
+
+      <div align="center">
+        <a href="/" class="btn btn-sm btn-default">
+          <i class="fa fa-arrow-circle-left"></i> Cancel
+        </a>
+      </div>
+    <div>
+      {% for i in get_flashed_messages() %}
+	<p id="flash">{{ i }}</font></p>
+	{% endfor %}
+	</div> 
+
+</div>
+
+</body>
+</html>

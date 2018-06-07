@@ -1,0 +1,32 @@
+
+body {
+  background-color:#e0d6ea;
+  font-family: Comic-sans;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  
+}
+.options {
+  padding: 30px;
+}
+#train {
+  color:#663399;
+  font-family: "Lobster";
+  font-size: 80px;
+  font-weight: 400;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+#reddit {
+  color:#ff6699;
+  font-size: 60px;
+  font-weight: 1200;
+}
+#login {
+  font-size: 23px;
+  padding: 14px;
+  margin: 17px;
+}
