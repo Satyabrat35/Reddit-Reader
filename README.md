@@ -1,6 +1,7 @@
 # **Reddit-Reader**
 ## Reddit Reader created using Flask and MongoDB
 1. Run the command 
+
 		pip install -r requirements.txt
         
 2. The packages will get installed
@@ -10,6 +11,7 @@
 4. If u are using MongoDB Atlas connection, then just edit uri details
 
 5. Run the command
+
 		python3 app1.py
         
 
