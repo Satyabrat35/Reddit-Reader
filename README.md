@@ -17,3 +17,7 @@
 
 ### Note
 The login and signup methods are just for the sake of playing with MongoDB queries and some sort of password  hashing using Bcrypt
+
+### To be included -
+1. Pagination
+2. Search Query
